@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oficial Website | Sinister Racing Team</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+  <div class="hero-container">
+    <swiper-container class="hero-slider" navigation="true">
+      <swiper-slide class="hero-slide">
+        <div class="card"></div>
+      </swiper-slide>
+      <swiper-slide class="hero-slide">
+        <div class="card"></div>
+      </swiper-slide>
+      <swiper-slide class="hero-slide">
+        <div class="card"></div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+
+
+
+  <div class="racing-container row align-center justify-center">
+    <div class="container">
+      <h2 class="section-title text-center">"As pistas estão chamando. Experimente a velocidade, a habilidade e a
+        indulgência na
+        busca pela
+        glória com a Sinister Racing nesta temporada de corridas. Mas primeiro, as novidades."</h2>
+    </div>
+  </div>
+
+  <div class="news-container">
+    <div class="container">
+      <h2 class="section-title">Ultimas Noticias</h2>
+      <swiper-container class="mySwiper " pagination="true" pagination-clickable="true" space-between="30"
+        slides-per-view="3">
+        <swiper-slide class="pb-4">
+          <div class="card col ">
+            <div class="card-img"><img src="./assets/img/news/news-1.webp" alt=""></div>
+            <div class="card-caption col gap-1">
+              <span
+                class="card-misc row gap-1"><span>day</span><span>-------------------------</span><span>local</span></span>
+              <h2 class="card-title">Lorem ipsum dolor sit amet consectetur.</h2>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide class="pb-4">
+          <div class="card col ">
+            <div class="card-img"><img src="./assets/img/news/news-2.webp" alt=""></div>
+            <div class="card-caption col gap-1">
+              <span
+                class="card-misc row gap-1"><span>day</span><span>-------------------------</span><span>local</span></span>
+              <h2 class="card-title">Lorem ipsum dolor sit amet consectetur.</h2>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide class="pb-4">
+          <div class="card col ">
+            <div class="card-img"><img src="./assets/img/news/news-3.webp" alt=""></div>
+            <div class="card-caption col gap-1">
+              <span
+                class="card-misc row gap-1"><span>day</span><span>-------------------------</span><span>local</span></span>
+              <h2 class="card-title">Lorem ipsum dolor sit amet consectetur.</h2>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+
+  <div class="categories-container mt-2">
+    <h2 class="section-title">Categorias</h2>
+    <div class="container">
+      <div class="card">
+        <img src="./assets/img/categories/formula.webp" alt="">
+        <div class="card-caption row justify-between">
+          <h2 class="title">Formula</h2>
+          <div class="ico"></div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./assets/img/categories/gt3.webp" alt="">
+        <div class="card-caption row justify-between">
+          <h2 class="title">GT3</h2>
+          <div class="ico"></div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./assets/img/categories/lmp2.webp" alt="">
+        <div class="card-caption row justify-between">
+          <h2 class="title">Prototype</h2>
+          <div class="ico"></div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./assets/img/categories/nascar.webp" alt="">
+        <div class="card-caption row justify-between">
+          <h2 class="title">Nascar V8</h2>
+          <div class="ico"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="donation-container mt-2">
+    <div class="container">
+      <div class="card">
+        <img src="./assets/img/banners/donation-banner.jpg" alt="">
+        <div class="caption col gap-1">
+          <h2 class="card-title">🏁 Apoie Nossa Equipe de Corrida Virtual</h2>
+
+          <p class="card-text">
+            Junte-se à nossa jornada rumo ao pódio. Cada contribuição acelera nosso sonho.
+          </p>
+          <ul class="col gap-1 card-text">
+            <li><span class="ico"><i class="bi bi-check-circle-fill me-05"></i></span>Equipamentos de ponta</li>
+            <li><span class="ico"><i class="bi bi-check-circle-fill me-05"></i></span>Treinamentos e inscrições em
+              campeonatos</li>
+            <li><span class="ico"><i class="bi bi-check-circle-fill me-05"></i></span>Expansão da equipe e visibilidade
+              no cenário
+              competitivo</li>
+          </ul>
+          <a href="#doar" class="btn-rounded m-auto mt-2">🚀 Doe agora!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="careers-container">
+    <div class="container col gap-2 py-2">
+      <span class="misc  p-05">Carreiras</span>
+      <div class="col gap-1">
+        <h2 class="title text-center">Junte-se ao nosso time</h2>
+        <a href="" class="btn-rounded m-auto">Veja as oportunidades</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const swiper = document.querySelector('.mySwiper');
+    if (swiper) {
+      const updateSlidesPerView = () => {
+        if (window.innerWidth <= 768) {
+          swiper.setAttribute('slides-per-view', '1');
+        } else {
+          swiper.setAttribute('slides-per-view', '3');
+        }
+      };
+      window.addEventListener('resize', updateSlidesPerView);
+      updateSlidesPerView();
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+</body>
+
+</html>
